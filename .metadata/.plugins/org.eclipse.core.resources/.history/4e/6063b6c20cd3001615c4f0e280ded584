@@ -1,0 +1,5 @@
+package rock.domain;
+
+public class User {
+
+}

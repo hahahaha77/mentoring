@@ -1,0 +1,14 @@
+package rock.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class UserController {
+	@PostMapping("/users")
+	public String create(String userId, String password, String name, String email) {
+		
+		return "";
+	}
+}

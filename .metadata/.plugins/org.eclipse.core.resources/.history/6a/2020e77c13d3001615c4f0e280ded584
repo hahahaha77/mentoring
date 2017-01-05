@@ -1,0 +1,19 @@
+package rock.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import rock.domain.User;
+import rock.domain.UserRepository;
+
+@Controller
+public class UserController {
+	private UserRepository userRepository;
+	
+	@PostMapping("/users")
+	public String create(User user) {
+		System.out.println("user : " + user);
+		userRepository.save(user);
+		return "redirect:/";
+	}
+}
